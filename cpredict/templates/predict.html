@@ -1,0 +1,120 @@
+
+{% extends "base.html" %}{% load static %}
+{% block pageContent %}
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>USER PORTAL</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5"><CENTER>
+          <br>
+                  <img src="{% static 'assets/img/portfolio/saycardio.jpg' %}" class="img-fluid" Align="center">
+                  <p style="color:crimson"><B>HELLO!</B></p>
+                  <hr>
+                  <p>FOR CARDIOVASCULAR HEART DISEASE PREDICTION KINDLY FILL IN THE FOLLOWING FORM</p>
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </CENTER>
+        </div>
+        <div class="col-lg-5 pt-4 pt-lg-0 content">
+          <div class="flex-column">
+            <form method="post" role="form">
+              {% csrf_token %}
+              <div class="row">
+                <div>
+                  <label for="age">AGE:</label>
+                  <input class="form-control" type="number" id="age" name="age" required>
+                </div>
+              
+                <div>
+                  <label for="gender">GENDER:</label>
+                    <select class="form-control" name="gender" id="gender" required>
+                      <option></option>
+                      <option value="1">Male</option>
+                      <option value="0">Female</option>
+                    </select>
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div>
+                  <label for="height">HEIGHT:</label>
+                  <input type="number" id="height" name="height" step="0.01" class="form-control" required>
+                </div>
+
+                <div>
+                  <label for="weight">WEIGHT:</label>
+                  <input type="number" id="weight" name="weight" step="0.01" class="form-control" required>
+                </div>
+
+              </div>
+
+                <div>
+                  <label for="Systolic blood pressur">SYSTOLIC B.P:</label>
+                  <input type="number" id="Systolic blood pressure" name="Systolic blood pressure" step="0.01" class="form-control"  required>
+                </div>
+
+                <div>
+                  <label for="Diastolic blood pressure">DIASTOLIC B.P:</label>
+                  <input type="number" id="Diastolic blood pressure" name="Diastolic blood pressure" step="0.01"  class="form-control"  required>
+                </div>
+              
+                <div>
+                  <label for="cholesterol">CHOLESTROL:</label>
+                  <input type="number" id="cholesterol" name="cholesterol" step="0.01" class="form-control" required>
+                </div>
+
+                <div>
+                  <label for="glucose">GLUCOSE:</label>
+                  <input type="number" id="glucose" name="glucose" step="0.01"  class="form-control" required>
+                </div>
+              
+                <div>
+                  <label for="smoking">SMOKING:</label>
+                  <select class="form-control" name="smoking" id="smoking" required>
+                    <option ></option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+                </div>
+              
+                <div>
+                  <label for="alcoholic">ALCOHOLIC:</label>
+                  <select class="form-control" name="alcoholic" id="alcoholic" required>
+                    <option ></option>
+                    <option value="1">Alcoholic</option>
+                    <option value="0">Not Alcoholic</option>
+                  </select>
+                </div>
+              
+                <div>
+                  <label for="Physical activity">PHYSICALLY ACTIVE:</label>
+                  <select class="form-control" name="Physical activity" id="Physical activity" required>
+                    <option ></option>
+                    <option value="1">Highly Active</option>
+                    <option value="0">Less Active</option>
+                  </select>
+                </div>
+              <hr>
+                <div class="text-center"><button class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" type="submit" value="Predict">SUBMIT</button></div>
+              </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+
+{% endblock pageContent %}

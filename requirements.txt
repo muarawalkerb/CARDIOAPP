@@ -1,0 +1,10 @@
+Editor e.g VSCODE
+Python >=3.11.0
+DJANGO >=4.0.0
+pandas
+seaborn
+numpy==1.23.5
+streamlit==1.20.0
+scikit-learn
+xgboost
+joblib

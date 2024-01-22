@@ -1,0 +1,52 @@
+
+{% extends "base.html" %}{% load static %}
+{% block pageContent %}
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>PREDICTION RESULTS</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5"><CENTER>
+          
+                  <img src="{% static 'assets/img/portfolio/saycardio.jpg' %}" class="img-fluid" Align="center">
+                  <p style="color:crimson"><B>THANKYOU!</B></p>
+                  <hr>
+                  <p>THE FOLLOWING IS THE PREDICTION RESULT FOR CARDIOVASCULAR HEART DISEASE </p>
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                  </div>
+                </CENTER>
+                
+        </div>
+        <div class="col-lg-5 pt-4 pt-lg-0 content">
+          <div class="d-flex flex-column justify-content-center">
+            <br><br>
+                <p style="color:crimson"> PEDICTION RESULTS INDICATED BELOW</p>
+                <hr>
+                <div>
+                  {% if prediction == 0 %}
+                  <p>Negative heart Disease Prediction 💛💛💛💛</p>
+                  
+                  {% elif prediction == 1 %}
+                  <p>Positive heart Disease Prediction 💔💔💔💔</p>
+
+                  {% endif %}
+                </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+
+{% endblock pageContent %}
